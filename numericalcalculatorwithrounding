@@ -1,0 +1,17 @@
+def round_number():
+    try:
+        number = float(input("Enter a number: "))
+        precision = input("Do you want to round to tenths or hundredths? (type 'tenths' or 'hundredths'): ").strip().lower()
+        
+        if precision == "tenths":
+            rounded = round(number, 1)
+            print(f"The number rounded to the nearest tenth is: {rounded}")
+        elif precision == "hundredths":
+            rounded = round(number, 2)
+            print(f"The number rounded to the nearest hundredth is: {rounded}")
+        else:
+            print("Invalid choice. Please choose either 'tenths' or 'hundredths'.")
+    except ValueError:
+        print("Please re-enter a valid number.")
+
+round_number()
